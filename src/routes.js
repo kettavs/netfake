@@ -1,16 +1,16 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import Main from './pages/Main';
-import Details from './pages/Details';
+import Latest from './pages/Latest';
+import MyList from './pages/MyList';
 
 export default function Routes() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={Main} />
-        <Route path="/details" component={Details} />
-      </Switch>
-    </BrowserRouter>
+    <Switch>
+      <Route path="/" exact component={Main} />
+      <Route path="/latest" component={Latest} />
+      <Route path="/my-list" component={MyList} />
+    </Switch>
   );
 }
