@@ -2,6 +2,7 @@ import React from 'react';
 
 import Slider from 'react-slick';
 
+import CardMovie from '../../components/CardMovie';
 import * as S from './styles';
 
 export default function Main() {
@@ -9,6 +10,7 @@ export default function Main() {
     className: 'movies',
     dots: true,
     infinite: false,
+    speed: 1000,
     slidesToShow: 5,
     slidesToScroll: 5,
   };
@@ -17,7 +19,7 @@ export default function Main() {
   for (let i = 0; i < 20; i++) {
     rows.push(
       <div key={i}>
-        <h3>{i}</h3>
+        <CardMovie />
       </div>
     );
   }
