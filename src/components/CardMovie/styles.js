@@ -1,19 +1,24 @@
 import styled from 'styled-components';
 
-export const Card = styled.div`
-  width: calc(100% - 6px);
-  margin: 40px 2px;
-  position: relative;
+export const Card = styled.div.attrs({
+  className: 'card',
+})`
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  /* width: calc(100% - 6px); */
+  /* margin: 40px 0; */
+  /* position: relative; */
 
   img {
     width: 100%;
+
+    &.little {
+      /* position: absolute; */
+    }
   }
 
-  .little {
-    position: absolute;
-  }
-
-  .little,
+  /*.little,
   .medium {
     transition: opacity 0.6s;
   }
@@ -50,5 +55,5 @@ export const Card = styled.div`
     .content {
       opacity: 1;
     }
-  }
+  } */
 `;

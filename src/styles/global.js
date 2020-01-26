@@ -10,6 +10,11 @@ export default createGlobalStyle`
 
   html, body, #root {
     min-height: 100%;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
@@ -17,7 +22,6 @@ export default createGlobalStyle`
     color: #fff;
     -webkit-font-smoothing: antialiased !important;
     font-family: Arial, Helvetica, sans-serif;
-    height: 1000px;
   }
 
   button{
