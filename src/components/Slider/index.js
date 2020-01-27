@@ -3,9 +3,12 @@ import React, { Component } from 'react';
 import CardMovie from '../CardMovie';
 import SliderButton from '../SliderButton';
 
+import img from '../../assets/img.jpg';
+import img2 from '../../assets/jurassic-park.jpg';
+
 import * as S from './styles';
 
-const length = 15;
+const length = 10;
 
 export default class Slider extends Component {
   constructor(props) {
@@ -62,11 +65,12 @@ export default class Slider extends Component {
     if (activeIndex > 1) {
       hasPrev = true;
     }
-
-    this.setState({
-      hasPrev,
-      hasNext,
-    });
+    setTimeout(() => {
+      this.setState({
+        hasPrev,
+        hasNext,
+      });
+    }, 600);
   };
 
   componentDidMount() {
@@ -74,14 +78,14 @@ export default class Slider extends Component {
   }
 
   render() {
-    const { title, slidesToShow } = this.props;
-    const { activeIndex, left, hasPrev, hasNext } = this.state;
+    const { id, className, title, slidesToShow } = this.props;
+    const { left, hasPrev, hasNext } = this.state;
 
     let rows = [];
     for (let i = 0; i < length; i++) {
       rows.push(
         <div key={i} className={`item card-${i}`}>
-          <CardMovie />
+          <CardMovie img={img} />
         </div>
       );
     }
@@ -91,7 +95,13 @@ export default class Slider extends Component {
         <h1 className="title">{title}</h1>
 
         <S.SliderContainer>
-          <S.Slider style={{ left }} slidesToShow={slidesToShow}>
+          <S.Slider
+            id={id}
+            className={className}
+            style={{ left }}
+            slidesToShow={slidesToShow}
+            totalSlides={length}
+          >
             {rows}
           </S.Slider>
 

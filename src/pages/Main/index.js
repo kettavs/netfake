@@ -7,7 +7,7 @@ import * as S from './styles';
 export default function Main() {
   return (
     <S.Container>
-      <MySlider title="Miha lista" />
+      <MySlider id="my-list" className="" title="Miha lista" />
 
       <MySlider title="Em alta" />
 

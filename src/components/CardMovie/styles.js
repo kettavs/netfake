@@ -3,57 +3,97 @@ import styled from 'styled-components';
 export const Card = styled.div.attrs({
   className: 'card',
 })`
-  height: auto;
   display: flex;
   overflow: hidden;
-  /* width: calc(100% - 6px); */
-  /* margin: 40px 0; */
-  /* position: relative; */
+  position: relative;
 
-  img {
-    width: 100%;
-
-    &.little {
-      /* position: absolute; */
-    }
-  }
-
-  /*.little,
-  .medium {
-    transition: opacity 0.6s;
-  }
-
-  .little {
-    opacity: 1;
-  }
-
-  .medium {
-    opacity: 0;
-  }
-
-  .content {
-    position: absolute;
-    bottom: 0;
-    opacity: 0;
-    padding: 5px 10px;
-  }
+  cursor: pointer;
 
   &:hover {
-    .little,
-    .medium {
-      transition: opacity 0.9s;
-    }
-
-    .little {
-      opacity: 0;
-    }
-
-    .medium {
-      opacity: 1;
-    }
-
     .content {
+      transition: all 0.6s;
+      transition-delay: 0.3s;
       opacity: 1;
     }
-  } */
+  }
+`;
+
+export const Banner = styled.img`
+  width: 100%;
+  height: auto;
+`;
+export const Content = styled.div.attrs({
+  className: 'content',
+})`
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5px 10px;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  opacity: 0;
+  transition-delay: 0.3s;
+
+  background: #14141430;
+  background-image: url(${props => props.bgImg});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+`;
+
+export const Overlay = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+`;
+
+export const Overview = styled.div`
+  flex: 1;
+  min-width: 0;
+`;
+
+export const Title = styled.p`
+  font-size: 12px;
+  margin: 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+export const Presentation = styled.p`
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+export const Actions = styled.div`
+  flex: 1;
+  margin-left: 10px;
+
+  flex: 0 0 1px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+`;
+
+export const Chevron = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 5px;
 `;
