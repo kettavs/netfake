@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="GoStack" src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/bootcamp-header.png" width="200px" />
+    <img alt="Netflix" src="https://raw.githubusercontent.com/BrunoSaibert/netfake/master/src/assets/logo.png" width="200px" />
 </p>
 
 <h1 align="center">
