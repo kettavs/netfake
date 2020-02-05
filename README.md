@@ -43,11 +43,19 @@ Após clonar o repositório, acesse a pasta do projeto;
 $ cd netfake
 ```
 
-Em seguida, instale as dependências;
+Instale as dependências;
 
 ```
 $ yarn
 ```
+
+Inicie a aplicação;
+
+```
+$ yarn start
+```
+
+Acesse o link http://localhost:3000/
 
 ## 🚧 **Em Desenvolvimento...**
 
