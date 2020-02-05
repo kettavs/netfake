@@ -21,8 +21,8 @@ export default function CardMovie({ img }) {
           </S.Overview>
 
           <S.Actions>
-            <AiOutlineDislike />
             <AiOutlineLike />
+            <AiOutlineDislike />
             <FaPlus />
           </S.Actions>
         </S.Overlay>
