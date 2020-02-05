@@ -20,9 +20,13 @@
   </a>
 </p>
 
+![Demonstração](https://netfake.netlify.com/)
+
 ## 🚀 Projeto
 
 O objetivo é clonar a interface da Netflix para fins de estudo.
+
+Veja aqui uma [demonstração](https://www.notion.so/Node-js-23c8e65c2fe7412e93e9908381c76a68#0555e02b157f479ea69393a1c2451484)
 
 ## 🔧 Tecnologias
 
